@@ -84,7 +84,8 @@ public class CredentialStoreTest {
     private ElytronRuntimeStoresPage page;
 
     @Before
-    public void initPage() {
+    public void initPage() throws InterruptedException {
+        page.wait(1000);
         page.navigate();
     }
 
